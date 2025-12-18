@@ -25,19 +25,19 @@ public class MessagePublisher {
 
     public void sendStringEvent() {
 
-        // navigates to a specific listener
+        // navigates to a specific (String-type) listener
         eventPublisher.publishEvent(new TypedMessageReceived<>("string message", "ID1"));
 
     }
     public void sendLongEvent() {
 
-        // navigates to a specific listener
+        // navigates to a specific (Long-type) listener
         eventPublisher.publishEvent(new TypedMessageReceived<>(2L, "ID2"));
 
     }
    public void sendEvent(int type) {
 
-       // can't navigate to any specific listener, because the parameter type is not known at compile time
+       // can't navigate to any typed listener, except Object. Navigates to raw-type listener
        eventPublisher.publishEvent(new TypedMessageReceived<>(getMessage(type), "ID1"));
 
    }
