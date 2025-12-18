@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class AnyMessageListener {
 
-    // navigates to all publishers
+    // navigates to all publishers - ok
     @EventListener
     public void onApplicationEvent(TypedMessageReceived event) {
         System.out.println("**********************************");

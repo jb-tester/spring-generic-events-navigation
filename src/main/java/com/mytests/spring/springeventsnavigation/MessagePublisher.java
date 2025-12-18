@@ -38,6 +38,7 @@ public class MessagePublisher {
    public void sendEvent(int type) {
 
        // can't navigate to any typed listener, except Object. Navigates to raw-type listener
+       // should navigate to all listeners
        eventPublisher.publishEvent(new TypedMessageReceived<>(getMessage(type), "ID1"));
 
    }

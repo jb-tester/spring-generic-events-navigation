@@ -13,6 +13,7 @@ public class LongMessageListener {
 
     // navigates to sendLongEvent() publisher that has the explicit Long-type parameter,
     // but not to sendEvent() one that gets parameter from getMessage():Object method call
+    // should navigate to both publishers
     @EventListener
     public void onApplicationEvent(TypedMessageReceived<Long> event) {
         System.out.println("**********************************");

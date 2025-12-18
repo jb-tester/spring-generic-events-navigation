@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class ObjectMessageListener {
 
     // navigates to sendEvent(int type) publisher (detected by the type of the event parameter that is getMessage():Object)
+    // is nether invoked actually
     @EventListener
     public void onApplicationEvent(TypedMessageReceived<Object> event) {
         System.out.println("**********************************");
